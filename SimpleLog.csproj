@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Georgi Chekanov</Authors>
+	<AssemblyName>Georgi Chekanov</AssemblyName>
+    <Version>0.0.1-alpha</Version>
+    <PackageId>SimpLog</PackageId>
+    <Description>A simple way of logging event in a log files. Works for NetCore 6 version</Description>
+    <Copyright>Copyright (c) Georgi Chekanov 2022</Copyright>
+    <Company>Georgi Chekanov</Company>
+    <Product>SimpLog</Product>
+    <PackageTags>log, .net core, logging, simple</PackageTags>
+    <AssemblyVersion></AssemblyVersion>
+    <SignAssembly>False</SignAssembly>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<RepositoryUrl>https://github.com/gchekanov/SimpLog</RepositoryUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
